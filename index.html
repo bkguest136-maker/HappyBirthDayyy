@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Surprise</title>
+
+<style>  
+
+body{
+margin:0;
+overflow:hidden;
+font-family: 'Comic Sans MS', cursive;
+background: linear-gradient(#87CEEB,#ffe4ec);
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+}
+
+/* pigeon */
+#pigeon{
+position:absolute;
+top:40%;
+left:110%;
+font-size:70px;
+cursor:pointer;
+animation: fly 8s linear infinite;
+}
+
+@keyframes fly{
+0%{left:110%}
+100%{left:-150px}
+}
+
+/* letter */
+#letter{
+position:absolute;
+top:-200px;
+width:260px;
+background:white;
+padding:20px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+opacity:0;
+}
+
+.drop{
+animation: drop 1.5s forwards;
+}
+
+@keyframes drop{
+0%{top:-200px; opacity:0}
+100%{top:35%; opacity:1}
+}
+
+/* hearts */
+
+.heart{
+position:absolute;
+color:red;
+font-size:20px;
+animation: float 2s linear forwards;
+}
+
+@keyframes float{
+0%{transform:translateY(0) scale(1); opacity:1}
+100%{transform:translateY(-150px) scale(2); opacity:0}
+}
+
+@keyframes glowPulse{
+
+from{
+text-shadow:
+0 0 5px #fff,
+0 0 10px #ff4da6;
+}
+
+to{
+text-shadow:
+0 0 20px #fff,
+0 0 40px #ff4da6;
+}
+
+}
+
+/* pages */
+
+#page2,#page3,#page4,#page5,#page6,#page7,#page8,#page9,#page10,#page11,#page12,#page13,#page14,#page15,#page16,#page17,#page18,#page19,#page20,#page21,#page22,#page23,#page24,#page25,#page26,#page27,#page28,#page29,#page30,#page31,#page32,#page33,#page34,#page35,#page36,#page37,#page38,#page39,#page40,#page41,#page42,#page43{
+    
+
+
+
+
+
+
+    
+
+display:none;
+position:absolute;
+width:100%;
+height:100%;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+#page2{
+background-image:url("cover1.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page3{background-image:url("cover3.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page4{background-image:url("mars1.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page5{background-image:url("space1.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page6{background-image:url("space4.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page7{background-image:url("mars2.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page8{background-image:url("space5.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page9{background-image:url("space6.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page10{background-image:url("mars3.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page11{background-image:url("mars4.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page12{background-image:url("cat1.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page13{background-image:url("mars5.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page14{background-image:url("cat2.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page15{background-image:url("tamon11.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page16{background-image:url("tamon2.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page17{background-image:url("cat3.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page18{background-image:url("hbd2.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page19{background-image:url("hbd4.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page20{background-image:url("tamon6.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page21{background-image:url("cat4.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page22{background-image:url("freefire1.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page23{background-image:url("freefire2.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page24{background-image:url("cat5.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page25{background-image:url("freefire3.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page26{background-image:url("hbd3.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page27{background-image:url("cat6.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page28{background-image:url("hbd1.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page29{background-image:url("cat9.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page30{background-image:url("hbd5.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page31{background-image:url("cat7.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page32{background-image:url("cat12.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page33{background-image:url("cat8.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page34{background-image:url("cat13.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page35{background-image:url("cat14.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page36{background-image:url("ash1.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page37{background-image:url("cat10.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page38{background-image:url("ash2.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page39{background-image:url("cat11.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+#page40{background-image:url("gift.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+h1{
+font-size:32px;
+color:white;
+text-shadow:
+0 0 5px #fff,
+0 0 10px #fff,
+0 0 20px #ff4da6,
+0 0 40px #ff4da6,
+0 0 60px #ff4da6;
+animation: glowPulse 2s infinite alternate;
+}
+
+p{
+color:white;
+font-size:18px;
+text-shadow:
+0 0 3px #000,
+0 0 6px #000,
+0 0 10px #ff66cc;
+}
+
+/* buttons */
+
+button{
+padding:12px 25px;
+margin:10px;
+font-size:18px;
+border:none;
+border-radius:20px;
+cursor:pointer;
+background:#ff4da6;
+color:white;
+
+box-shadow:
+0 0 10px #ff4da6,
+0 0 20px #ff4da6,
+0 0 30px #ff4da6;
+
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+#page5, #page6{
+position:relative;
+overflow:hidden;
+}
+
+.solarConfetti{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+
+}
+
+.planet{
+
+position:absolute;
+font-size:25px;
+animation: orbit 20s linear infinite;
+
+}
+
+.sun{
+top:50%;
+left:50%;
+font-size:40px;
+animation:none;
+}
+
+.mercury{
+top:20%;
+left:10%;
+animation-duration:12s;
+}
+
+.venus{
+top:70%;
+left:20%;
+animation-duration:18s;
+}
+
+.earth{
+top:30%;
+left:80%;
+animation-duration:22s;
+}
+
+.mars{
+top:80%;
+left:60%;
+animation-duration:25s;
+}
+
+@keyframes orbit{
+
+0%{
+transform: rotate(0deg) translateX(40px) rotate(0deg);
+}
+
+100%{
+transform: rotate(360deg) translateX(40px) rotate(-360deg);
+}
+
+}
+
+#page8, #page9{
+position:relative;
+overflow:hidden;
+}
+
+.shootingStars{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+pointer-events:none;
+}
+
+.shootingStars span{
+
+position:absolute;
+top:-10%;
+width:2px;
+height:120px;
+
+background:linear-gradient(to bottom, white, transparent);
+
+animation:shoot 5s linear infinite;
+opacity:0.9;
+
+}
+
+/* positions */
+
+.shootingStars span:nth-child(1){ left:10%; animation-delay:0s; }
+.shootingStars span:nth-child(2){ left:30%; animation-delay:1s; }
+.shootingStars span:nth-child(3){ left:50%; animation-delay:2s; }
+.shootingStars span:nth-child(4){ left:70%; animation-delay:3s; }
+.shootingStars span:nth-child(5){ left:90%; animation-delay:4s; }
+
+@keyframes shoot{
+
+0%{
+transform:translate(0,0) rotate(35deg);
+opacity:1;
+}
+
+100%{
+transform:translate(-500px,700px) rotate(35deg);
+opacity:0;
+}
+
+}
+
+.galaxyBackground{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:radial-gradient(circle at center,#020111,#000000 80%);
+
+overflow:hidden;
+z-index:-1;
+
+}
+
+/* moving stars */
+
+.galaxyBackground::before,
+.galaxyBackground::after{
+
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:200%;
+height:200%;
+
+background-image:
+radial-gradient(2px 2px white, transparent),
+radial-gradient(1px 1px white, transparent),
+radial-gradient(2px 2px white, transparent);
+
+background-size:100px 100px,150px 150px,200px 200px;
+
+animation:starMove 120s linear infinite;
+
+opacity:0.6;
+
+}
+
+@keyframes starMove{
+
+from{
+transform:translate(0,0);
+}
+
+to{
+transform:translate(-500px,-500px);
+}
+
+}
+
+/* Anime Characters Layer */
+.anime-characters-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Behind content, above background */
+    pointer-events: none;
+}
+
+/* Character base */
+.character {
+    position: absolute;
+    width: 80px;
+    height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.85;
+    animation: floatChar 6s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes floatChar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Glow aura effect */
+.character::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.4), transparent);
+    filter: blur(15px);
+    z-index: -1;
+}
+
+/* Main Layer */
+.japan-bg-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* 🌸 Sakura petals */
+.sakura16 {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: pink;
+    border-radius: 50% 50% 50% 0;
+    opacity: 0.8;
+    animation: fall16 linear infinite;
+}
+
+@keyframes fall16 {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+/* ✨ Joy particles */
+.spark16 {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    animation: floatSpark 4s infinite alternate;
+}
+
+@keyframes floatSpark {
+    from { transform: translateY(0px); opacity: 0.3; }
+    to { transform: translateY(-20px); opacity: 1; }
+}
+
+/* 🏯 Japanese building silhouette */
+.japan-building {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background: url('tower.png') repeat-x;
+    background-size: contain;
+}
+
+/* ===== PAGE 26 BIRTHDAY BG ===== */
+
+#page26 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* main layer */
+#bday26 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* 🎈 balloons */
+.b26-balloon {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background: red;
+    border-radius: 50%;
+    animation: b26-float linear infinite;
+}
+
+@keyframes b26-float {
+    from { transform: translateY(110vh); }
+    to { transform: translateY(-10vh); }
+}
+
+/* 🎆 spark */
+.b26-spark {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: yellow;
+    border-radius: 50%;
+    animation: b26-spark 1s linear infinite;
+}
+
+@keyframes b26-spark {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(2); opacity: 0; }
+}
+
+/* 🎁 gift */
+.b26-gift {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(red, darkred);
+    border: 2px solid gold;
+    animation: b26-pop 2s infinite;
+}
+
+@keyframes b26-pop {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+/* ===== PAGE 42 MUSIC DARK THEME ===== */
+
+#page42 {
+    position: relative;
+    overflow: hidden;
+}
+
+#music42 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(circle, #0a0a0a, #000000);
+}
+
+/* 🎵 music notes */
+.m42-note {
+    position: absolute;
+    font-size: 18px;
+    color: #00ffff;
+    animation: m42-float linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes m42-float {
+    from { transform: translateY(110vh); }
+    to { transform: translateY(-10vh); }
+}
+
+/* 🌊 equalizer bars */
+.m42-bar {
+    position: absolute;
+    bottom: 0;
+    width: 4px;
+    background: #ff00ff;
+    animation: m42-beat 1s infinite alternate;
+}
+
+@keyframes m42-beat {
+    from { height: 10px; }
+    to { height: 60px; }
+}
+
+/* ✨ particles */
+.m42-dot {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+/* ===== ULTRA CINEMATIC INTRO ===== */
+
+#launchScreen {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, #000000, #020024);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* canvas background */
+#launchCanvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* content */
+.launchContent {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+/* timer */
+#timerText {
+    font-size: 70px;
+    color: #00ffff;
+    font-weight: bold;
+
+    text-shadow:
+        0 0 10px #00ffff,
+        0 0 30px #00ffff,
+        0 0 60px #00ffff;
+
+    animation: pulse 1s infinite;
+}
+
+/* mobile responsive */
+@media (max-width: 600px) {
+    #timerText {
+        font-size: 50px;
+    }
+}
+
+/* subtitle */
+.launchContent p {
+    color: white;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="launchScreen">
+    <canvas id="launchCanvas"></canvas>
+
+    <div class="launchContent">
+        <div id="timerText">500</div>
+        <p>Savdhan Satark rhe 🤣😅</p>
+    </div>
+</div>
+
+<div id="pigeon">🕊️💌</div>
+
+<div id="letter">
+<h2>Excuse Me 👀❓</h2>
+<p>
+Mere is khoye hue message ko tum apne dil💖 tak ka rasta dikhaogi❓
+</p>
+<p><b>Mera dil he tumhara address hn➡</b></p>
+</div>
+
+<div id="page2">
+<h1>U r very lucky aaj cinema day hn😉</h1>
+<p>
+I would take u to the movies but they dont allow snacks🍫
+</p>
+<p><b></b>💖 Toh Rules tod dete hn➡ 💖</b></p>
+</div>
+
+<div id="page3">
+<h1>✨ Tumhe pata hn aaj whiskey day bhi hn ✨</h1>
+<p>
+Forget about Spiderman, Superman n Batman i will be ur Man 💖
+</p>
+<p><b>Unhe duniya bachane do tum bs mera dil sambhal lo➡</b></p>
+</div>
+
+<div id="page4">
+<h1>So Mrs Aries</h1>
+<p>Do u want space or attention </p>
+
+<button onclick="yesPage()">Space ❤️</button>
+<button onclick="noPage()">Attention 😅</button>
+
+</div>
+
+<div id="page5">
+
+<div class="solarConfetti">
+
+<div class="planet sun">☀️</div>
+<div class="planet mercury">🪐</div>
+<div class="planet venus">🟡</div>
+<div class="planet earth">🌍</div>
+<div class="planet mars">🔴</div>
+
+</div>
+
+<h1>💖 Do u work for Nasa❓  💖</h1>
+<p>
+Because you are out of this world🌏 🎉
+</p>
+<p>😘💕➡</p>
+</div>
+
+<div id="page6">
+  
+<div class="solarConfetti">
+
+<div class="planet sun">☀️</div>
+<div class="planet mercury">🪐</div>
+<div class="planet venus">🟡</div>
+<div class="planet earth">🌍</div>
+<div class="planet mars">🔴</div>
+
+</div>
+
+<h1>😂 Attention chaiye tumhe</h1>
+<p>
+Chain rain may God give you Brain 😆
+</p>
+<p>idhar hn tumhara Brain 🧠🦿🤣</p>
+</div>
+
+<div id="page7">
+<h1>🎉 U r red n am hot 🎉</h1>
+<p>Mars or Venus alag ho skte hn par hum dono perfect orbit mein hn? 😊</p>
+
+<button onclick="page8open()">Hnji 💖</button>
+<button onclick="page9open()">Na 😜</button>
+</div>
+
+<div id="page8">
+  
+<div class="galaxyBackground"></div>
+
+<div class="shootingStars">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<h1>💘 oh apko orbit acha lga mera</h1>
+<p>
+This zamana is zehrilla in which u r sweet like sheera n precious like heera 🎁
+</p>
+</div>
+
+<div id="page9">
+
+<div class="galaxyBackground"></div>
+
+<div class="shootingStars">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<h1>😅 Na.. hn rone ka mann hn?</h1>
+<p>
+Mrs Aries no bhi itna confident bolti ho jaise universe tumhara hi ho😜! 🎉
+</p>
+</div>
+
+<div id="page10">
+<h1> Am i invading your space?</h1>
+<p>Or slowly becoming your fav place? 😊</p>
+
+<button onclick="page10Yes()">Already fav ho 💖</button>
+<button onclick="page10No()">Ban jaoge 😄</button>
+</div>
+
+<div id="page11">
+<h1>🎉 Are you sure you are not a supermagnet!</h1>
+<p>Because im getting attracted you...</p>
+</div>
+
+<div id="page12">
+<h1>😄 600 wala revive</h1>
+<p>Chasma laga lo dikh nhi rha me kitna paas a chuka hu!</p>
+</div>
+
+<div id="page13">
+
+<h1>🤔 You know that?</h1>
+<p>Opposite sign attract each other right?</p>
+
+<button onclick="page13Yes()">Tumse milne k baad pata chala</button>
+<button onclick="page13No()">Mera syllabus incomplete hn 😜</button>
+</div>
+
+<div id="page14">
+<h1>Career change ka time agya</h1>
+<p>
+Teacher mujhe samajhne ka course lelo 💖
+</p>
+</div>
+
+<div id="page15">
+
+<div class="anime-characters-layer"></div>
+
+<h1>Ye Tamon hn</h1>
+<p>Who is more reliable?</p>
+
+<button onclick="page15Yes()">I like Ash 💖</button>
+<button onclick="page15No()">I like Tamon 😅</button>
+</div>
+
+<div id="page16">
+
+   <div class="japan-bg-layer"></div>
+
+<h1>😊 Pyar me mat giro nali me gir jao!</h1>
+<p>So i just got promoted to ur fav?</p>
+
+<button onclick="page16Yes()">Already ho💕</button>
+<button onclick="page16No()">zero wala revive 😜</button>
+</div>
+
+<div id="page17">
+<h1>🤣</h1>
+<p>Ye dekho Princess Tamon!</p>
+<p>Akashi Husband🤣</p>
+</div>
+
+<div id="page18">
+<h1>Prithvi ko kahte hn Earth</h1>
+<p>
+Chahe kuch bhi hojaye do not ever question your worth🎉💖
+</p>
+</div>
+
+<div id="page19">
+<h1>🎈 Japan mein milti hn sushi</h1>
+<p>
+Stop focusing on things that steal your Khushi! 😊
+</p>
+</div>
+
+<div id="page20">
+
+<h1>So Akanksha ji</h1>
+<p>Mujhe attention milega ya next episode ka wait karu?</p>
+
+<button onclick="page20Yes()">Full ep apka hn 😍</button>
+<button onclick="page20No()">Next ep 😅</button>
+</div>
+
+<div id="page21">
+<h1>💖 HAPPY 21st BIRTHDAY AKANKSHA🎂</h1>
+<p>If you are feeling aadha adhura just remember that chand doesnt need anything or anyone else to make itself poora!</p>
+<p>Congratulations for getting wrinkles</p>
+</div>
+
+<div id="page22">
+
+<h1>Yahi par mile th</h1>
+<p>Even in low ping.. my Heart💖 lags when im with u</p>
+
+<button onclick="page22Yes()">999+ping 🎉</button>
+<button onclick="page22No()">Network error 😄</button>
+</div>
+
+<div id="page23">
+<h1>🎈 Anyone can wish you..</h1>
+<p>But did anyone make you feel like i do hn?</p>
+
+<button onclick="page23Yes()">Haa 😑</button>
+<button onclick="page23No()">Never 😍</button>
+</div>
+
+<div id="page24">
+<h1>🎉 Kuch toh baat hn tum me!</h1>
+<p>Varna koi pitai khane wali baat kaise kar skta hn!</p>
+<p>😤➡</p>
+</div>
+
+<div id="page25">
+<h1>🤔 Suno enemies can knock me...</h1>
+<p>But only you can finish me 🍽 </p>
+
+<button onclick="page25Yes()">Duo with me 💑😍</button>
+<button onclick="page25No()">Squad with ur friends 🐣🐛🐁🦎</button>
+</div>
+
+<div id="page26">
+
+    <div id="bday26"></div>
+
+<h1>🎂 MY SPECIAL NOTE</h1>
+<p>
+I didnt know what to get for you because you already have a lot so i found the one thing that i know you dont have 🎉💖
+</p>
+<p>Here you go 👉🧠</p>
+<p>                 -HAPPY BIRTHDAY🎈🎉</p>
+</div>
+
+<div id="page27">
+<h1>😊 Squad khelna hn tumhe</h1>
+<p>
+Apke gaal kitne pyaare hn.. kya me 2 thappad maar du 🎈
+</p>
+</div>
+
+<div id="page28">
+<h1>🎁 I have a gift for you</h1>
+<p>Do you want or may i handle your heart?</p>
+
+<button onclick="page28Yes()">Give your heart to me 💖</button>
+<button onclick="page28No()">Take my Gift for you 🎁</button>
+</div>
+
+<div id="page29">
+<h1>😊 Tumhara sahi hn</h1>
+<p>
+na dimag hn na tension! ye tum ho
+</p>
+</div>
+
+<div id="page30">
+<h1>🎊 Are you sure u are ready?</h1>
+<p>My gifts come with my feelings attached</p>
+
+<button onclick="page30Yes()">Ash ji Gift 💖</button>
+<button onclick="page30No()">Cake Party 😄</button>
+</div>
+
+<div id="page31">
+<h1>😄 Party k liye tyar kr raha hu tumhe!</h1>
+<p>
+Dekho apne wavy hair🤣
+</p>
+</div>
+
+<div id="page32">
+<h1>Im serious now</h1>
+<p>Still kya me tumhe irritating lagta hu?</p>
+
+<button onclick="page32Yes()">Naa 💖</button>
+<button onclick="page32No()">Ha bahot jyada 😅</button>
+</div>
+
+<div id="page33">
+<h1>🎈 Ye mere dil ne pucha hn</h1>
+<p>Still u feel uncomfortable with me?</p>
+
+<button onclick="page33Yes()">Na i feel more comfortable</button>
+<button onclick="page33No()">Ha 💔</button>
+</div>
+
+<div id="page34">
+<h1>🎉 Mehnat jari rkho gift aage hn</h1>
+<p>
+I want u to know i have enjoyed annoying u all this time n how excited i am to continue this in the future.
+</p>
+</div>
+
+<div id="page35">
+<h1>🎁 Mehnat ka fal sirf ek nhi 2 hn</h1>
+<p>
+This is an annual reminder im super glad you were born🎉
+</p>
+</div>
+
+<div id="page36">
+<h1>Ye lo apka Gift👇</h1>
+<p><b>ASH KETCHUM</b></p>
+
+<button onclick="page36Yes()">Ash 💖</button>
+<button onclick="page36No()">Pikachu 😅</button>
+</div>
+
+<div id="page37">
+<h1>😊 This is our Destination</h1>
+<p>
+Smile krlo 4.9foot!
+</p>
+</div>
+
+<div id="page38">
+<h1>🎁 Akanksha ji</h1>
+<p>Apne hatho se cake khilao na</p>
+<p><b>naha do kar ana noobdi gande hatho se nhi</b></p>
+
+<button onclick="page38Yes()">Brush bhi nhi krungi </button>
+<button onclick="page38No()">Nahaungi bhi nhi 😄</button>
+</div>
+
+<div id="page39">
+<h1>😊 Menu tang na kar</h1>
+<p>
+Kuch saalo baad utha kar fek skti ho 💪
+</p>
+</div>
+
+<div id="page40">
+
+<h1>🎁 A Special Gift For You 🎁</h1>
+<p>6J8J-6DANXE-VJ6C</p>
+
+<div id="giftBox" onclick="openGift()" style="font-size:120px; cursor:pointer; animation: pop 2s infinite;">
+🎁
+</div>
+
+<div id="giftContent" style="display:none; margin-top:20px; text-align:center;">
+
+<img src="Screenshot_20260326-215450_Gmail.jpg"
+style="width:80%; max-width:320px; border-radius:15px; box-shadow:0 10px 20px rgba(0,0,0,0.3);">
+
+<p style="margin-top:10px;">💖 Gift is good than redeem code buy something special 💖</p>
+
+<div style="margin-top:20px;">
+<button onclick="stay40()">🎈Happy</button>
+<button onclick="next40()">Birthday ➡</button>
+</div>
+
+</div>
+
+</div>
+
+<div id="page41">
+<h1>✨ To my Dear Akanksha</h1>
+<p>I know its not like your 18th Birthday but i tried my best to keep this one of your best memory. I laugh every serious moment but as i dont react its not mean i dont understand anything. Mere pas ek or surprise hn apke liye i hope u like it tumhari demand pr hn i dont do anything for anyone and u are the first one mujhe ata hn mrs already 1st year kiya hn bhot kuch missing just bcoz of time so i will make sure next year it will be superfantastic, or 21 hui ho abhi 40saal or hn world is bigger than ur expectation just explore it with positive vibe.</p>
+</div>
+
+<div id="page42">
+
+    <div id="music42"></div>
+
+<h1>🎵 Special Birthday Music</h1>
+
+<p>Waise me apni marji se krta hu pr today is special day</p>
+
+<button onclick="playMusic()">▶ Special</button>
+
+<audio id="birthdayMusic">
+<source src="happy2.mp3" type="audio/mpeg">
+</audio>
+
+<div id="proceedBtn" style="display:none; margin-top:20px;">
+<button onclick="goToFinal()">Note ➡️</button>
+</div>
+
+</div>
+
+</div>
+
+<div id="page43">
+<h1>🎂 HAPPY 21ST BIRTHDAYYYYY</h1>
+<p>
+Thank you for exploring this entire birthday adventure.  
+Wishing you happiness, success and love always 💖  FROM DIMPLES TO WRINKLES I WILL BE THERE 4 U
+<br><br>
+Happy Birthday Once Again 🎉
+</p>
+</div>
+
+<audio id="bgMusic" loop>
+<source src="happybirthday.mp3" type="audio/mpeg">
+</audio>
+<audio id="s-click" src="uisoft.mp3"></audio>
+<audio id="s-romantic" src="piano.mp3"></audio>
+<audio id="s-game" src="game.mp3"></audio>
+<audio id="s-party" src="party.mp3"></audio>
+
+<script>
+
+let pigeon = document.getElementById("pigeon")
+let letter = document.getElementById("letter")
+let page2 = document.getElementById("page2")
+let page3 = document.getElementById("page3")
+let page4 = document.getElementById("page4")
+let page5 = document.getElementById("page5")
+let page6 = document.getElementById("page6")
+let page7 = document.getElementById("page7")
+
+pigeon.onclick = () =>{
+letter.classList.add("drop")
+}
+
+document.addEventListener("click",function(e){
+
+let heart = document.createElement("div")
+heart.className="heart"
+heart.innerHTML="❤️"
+heart.style.left=e.clientX+"px"
+heart.style.top=e.clientY+"px"
+
+document.body.appendChild(heart)
+
+setTimeout(()=>{
+heart.remove()
+},2000)
+
+})
+
+letter.addEventListener("click",()=>{
+letter.style.display="none"
+pigeon.style.display="none"
+page2.style.display="flex"
+})
+
+page2.addEventListener("click",()=>{
+page2.style.display="none"
+page3.style.display="flex"
+})
+
+page3.addEventListener("click",()=>{
+page3.style.display="none"
+page4.style.display="flex"
+})
+
+function yesPage(){
+page4.style.display="none"
+page5.style.display="flex"
+}
+
+function noPage(){
+page4.style.display="none"
+page6.style.display="flex"
+}
+
+page5.addEventListener("click",()=>{
+page5.style.display="none"
+page7.style.display="flex"
+})
+
+page6.addEventListener("click",()=>{
+page6.style.display="none"
+page7.style.display="flex"
+})
+
+let page8 = document.getElementById("page8")
+let page9 = document.getElementById("page9")
+
+function page8open(){
+page7.style.display="none"
+page8.style.display="flex"
+}
+
+function page9open(){
+page7.style.display="none"
+page9.style.display="flex"
+}
+
+let page10 = document.getElementById("page10")
+
+page8.addEventListener("click",()=>{
+page8.style.display="none"
+page10.style.display="flex"
+})
+
+page9.addEventListener("click",()=>{
+page9.style.display="none"
+page10.style.display="flex"
+})
+
+function page10Yes(){
+alert("More surprises coming soon! 🎉")
+}
+
+function page10No(){
+alert("Thanks for enjoying the birthday website! 💖")
+}
+
+let page11 = document.getElementById("page11")
+let page12 = document.getElementById("page12")
+let page13 = document.getElementById("page13")
+let page14 = document.getElementById("page14")
+let page15 = document.getElementById("page15")
+
+function page10Yes(){
+page10.style.display="none"
+page11.style.display="flex"
+}
+
+function page10No(){
+page10.style.display="none"
+page12.style.display="flex"
+}
+
+page11.addEventListener("click",()=>{
+page11.style.display="none"
+page13.style.display="flex"
+})
+
+page12.addEventListener("click",()=>{
+page12.style.display="none"
+page13.style.display="flex"
+})
+
+function page13Yes(){
+page13.style.display="none"
+page14.style.display="flex"
+}
+
+function page13No(){
+page13.style.display="none"
+page15.style.display="flex"
+}
+
+page14.addEventListener("click",()=>{
+page14.style.display="none"
+page15.style.display="flex"
+})
+
+let page16 = document.getElementById("page16")
+let page17 = document.getElementById("page17")
+let page18 = document.getElementById("page18")
+let page19 = document.getElementById("page19")
+
+function page15Yes(){
+page15.style.display="none"
+page16.style.display="flex"
+}
+
+function page15No(){
+page15.style.display="none"
+page17.style.display="flex"
+}
+
+page17.addEventListener("click",()=>{
+page17.style.display="none"
+page16.style.display="flex"
+})
+
+function page16Yes(){
+page16.style.display="none"
+page18.style.display="flex"
+}
+
+function page16No(){
+page16.style.display="none"
+page19.style.display="flex"
+}
+
+let page20 = document.getElementById("page20")
+let page21 = document.getElementById("page21")
+let page22 = document.getElementById("page22")
+
+page18.addEventListener("click",()=>{
+page18.style.display="none"
+page20.style.display="flex"
+})
+
+page19.addEventListener("click",()=>{
+page19.style.display="none"
+page20.style.display="flex"
+})
+
+function page20Yes(){
+page20.style.display="none"
+page21.style.display="flex"
+}
+
+function page20No(){
+page20.style.display="none"
+page22.style.display="flex"
+}
+
+page21.addEventListener("click",()=>{
+page21.style.display="none"
+page22.style.display="flex"
+})
+
+function page22Yes(){
+alert("🎉 Let's celebrate again! Happy Birthday! 🎂")
+}
+
+function page22No(){
+alert("😊 Thanks for enjoying the birthday website!")
+}
+
+let page23 = document.getElementById("page23")
+let page24 = document.getElementById("page24")
+let page25 = document.getElementById("page25")
+let page26 = document.getElementById("page26")
+let page27 = document.getElementById("page27")
+
+function page22Yes(){
+page22.style.display="none"
+page23.style.display="flex"
+}
+
+function page22No(){
+page22.style.display="none"
+page23.style.display="flex"
+}
+
+function page23Yes(){
+page23.style.display="none"
+page24.style.display="flex"
+}
+
+function page23No(){
+page23.style.display="none"
+page25.style.display="flex"
+}
+
+page24.addEventListener("click",()=>{
+page24.style.display="none"
+page25.style.display="flex"
+})
+
+function page25Yes(){
+page25.style.display="none"
+page26.style.display="flex"
+}
+
+function page25No(){
+page25.style.display="none"
+page27.style.display="flex"
+}
+
+let page28 = document.getElementById("page28")
+let page29 = document.getElementById("page29")
+let page30 = document.getElementById("page30")
+
+page25.addEventListener("click",()=>{
+
+startMusic()
+
+})
+
+page26.addEventListener("click",()=>{
+page26.style.display="none"
+page28.style.display="flex"
+})
+
+page27.addEventListener("click",()=>{
+page27.style.display="none"
+page26.style.display="flex"
+})
+
+function page28Yes(){
+page28.style.display="none"
+page30.style.display="flex"
+}
+
+function page28No(){
+page28.style.display="none"
+page29.style.display="flex"
+}
+
+function page30Yes(){
+alert("🎂 Happy Birthday once again! Hope you loved this surprise!")
+}
+
+function page30No(){
+alert("😊 Thanks for playing through this birthday adventure!")
+}
+
+let page31 = document.getElementById("page31")
+let page32 = document.getElementById("page32")
+
+page29.addEventListener("click",()=>{
+page29.style.display="none"
+page30.style.display="flex"
+})
+
+function page30Yes(){
+page30.style.display="none"
+page32.style.display="flex"
+}
+
+function page30No(){
+page30.style.display="none"
+page31.style.display="flex"
+}
+
+page31.addEventListener("click",()=>{
+page31.style.display="none"
+page32.style.display="flex"
+})
+
+function page32Yes(){
+alert("🎂 I'm really happy you enjoyed it! Happy Birthday again!")
+}
+
+function page32No(){
+alert("😊 Thanks for still exploring the birthday website!")
+}
+
+let page33 = document.getElementById("page33")
+
+function page32Yes(){
+page32.style.display="none"
+page34.style.display="flex"
+}
+
+function page32No(){
+page32.style.display="none"
+page33.style.display="flex"
+}
+
+function page33Yes(){
+page33.style.display="none"
+page35.style.display="flex"
+}
+
+function page33No(){
+alert("🎂 Thanks for completing the entire birthday adventure!")
+}
+
+let page35 = document.getElementById("page35")
+
+page34.addEventListener("click",()=>{
+page34.style.display="none"
+page2.style.display="flex"
+})
+
+page35.addEventListener("click",()=>{
+page35.style.display="none"
+page2.style.display="flex"
+})
+
+let page36 = document.getElementById("page36")
+let page37 = document.getElementById("page37")
+let page38 = document.getElementById("page38")
+
+function page33No(){
+page33.style.display="none"
+page36.style.display="flex"
+}
+
+function page36Yes(){
+page36.style.display="none"
+page38.style.display="flex"
+}
+
+function page36No(){
+page36.style.display="none"
+page37.style.display="flex"
+}
+
+function page38Yes(){
+page38.style.display="none"
+page40.style.display="flex"
+}
+
+function page38No(){
+page38.style.display="none"
+page39.style.display="flex"
+}
+
+page37.addEventListener("click",()=>{
+page37.style.display="none"
+page38.style.display="flex"
+})
+
+let page39 = document.getElementById("page39")
+let page40 = document.getElementById("page40")
+
+page39.addEventListener("click",()=>{
+page39.style.display="none"
+page40.style.display="flex"
+})
+
+
+function openGift(){
+
+document.getElementById("giftBox").style.display="none"
+document.getElementById("giftContent").style.display="block"
+
+}
+
+function stay40(){
+
+page40.style.display="flex"
+
+}
+
+function next40(){
+
+stopMusic()
+
+page40.style.display="none"
+page41.style.display="flex"
+
+}
+
+let page41 = document.getElementById("page41")
+let page42 = document.getElementById("page42")
+let page43 = document.getElementById("page43")
+
+
+page41.addEventListener("click",()=>{
+page41.style.display="none"
+page42.style.display="flex"
+})
+
+page42.addEventListener("click",()=>{
+page42.style.display="none"
+page43.style.display="flex"
+})
+
+function playMusic(){
+document.getElementById("birthdayMusic").play()
+}
+
+
+let musicPlayed = false
+
+function playMusic(){
+let music = document.getElementById("birthdayMusic")
+music.play()
+musicPlayed = true
+}
+
+function stay42(){
+page42.style.display="flex"
+}
+
+function next42(){
+
+if(musicPlayed == false){
+alert("Please listen to the music first 🎵")
+return
+}
+
+page42.style.display="none"
+page43.style.display="flex"
+}
+
+
+function playMusic(){
+
+let music = document.getElementById("birthdayMusic")
+music.play()
+
+document.getElementById("proceedBtn").style.display="block"
+
+}
+
+function goToFinal(){
+
+page42.style.display="none"
+page43.style.display="flex"
+
+}
+
+let music = document.getElementById("bgMusic")
+
+function startMusic(){
+
+music.volume = 0
+music.play()
+
+let fadeIn = setInterval(function(){
+
+if(music.volume < 0.9){
+
+music.volume += 0.05
+
+}else{
+
+clearInterval(fadeIn)
+
+}
+
+},300)
+
+}
+
+function stopMusic(){
+
+let fadeOut = setInterval(function(){
+
+if(music.volume > 0.05){
+
+music.volume -= 0.05
+
+}else{
+
+music.pause()
+clearInterval(fadeOut)
+
+}
+
+},300)
+
+}
+
+</script>
+
+<script>
+const layer = document.querySelector(".anime-characters-layer");
+
+// 👉 Replace these with your own images if you want
+const characters = [
+    "izumii.jpg", // Gojo style
+    "jinwoo.jpg", // Jinwoo style
+   
+    "Akashi.jpg", // Akashi style
+    "izumi.jpg", // Izumi style
+];
+
+// Create characters
+for (let i = 0; i < characters.length; i++) {
+    let char = document.createElement("div");
+    char.classList.add("character");
+
+    char.style.backgroundImage = `url(${characters[i]})`;
+
+    // Random positions
+    char.style.left = Math.random() * 90 + "vw";
+    char.style.top = Math.random() * 80 + "vh";
+
+    // Different animation timing
+    char.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+    layer.appendChild(char);
+}
+</script>
+
+<script>
+const japanLayer = document.querySelector(".japan-bg-layer");
+
+// 🌸 Sakura
+for (let i = 0; i < 35; i++) {
+    let petal = document.createElement("div");
+    petal.classList.add("sakura16");
+
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+    japanLayer.appendChild(petal);
+}
+
+// ✨ Sparkles (joy feeling)
+for (let i = 0; i < 40; i++) {
+    let spark = document.createElement("div");
+    spark.classList.add("spark16");
+
+    spark.style.left = Math.random() * 100 + "vw";
+    spark.style.top = Math.random() * 100 + "vh";
+
+    japanLayer.appendChild(spark);
+}
+
+// 🏯 Building layer
+let building = document.createElement("div");
+building.classList.add("japan-building");
+japanLayer.appendChild(building);
+</script>
+
+<script>
+window.onload = function(){
+
+const layer = document.querySelector("#page26 #bday26");
+if(!layer) return; // stops error safely
+
+// 🎈 balloons
+for(let i=0;i<15;i++){
+    let b = document.createElement("div");
+    b.className = "b26-balloon";
+    b.style.left = Math.random()*100 + "%";
+    b.style.animationDuration = (4 + Math.random()*4) + "s";
+    layer.appendChild(b);
+}
+
+// 🎆 sparks
+for(let i=0;i<25;i++){
+    let s = document.createElement("div");
+    s.className = "b26-spark";
+    s.style.top = Math.random()*100 + "%";
+    s.style.left = Math.random()*100 + "%";
+    layer.appendChild(s);
+}
+
+// 🎁 gifts
+for(let i=0;i<8;i++){
+    let g = document.createElement("div");
+    g.className = "b26-gift";
+    g.style.bottom = "0px";
+    g.style.left = Math.random()*100 + "%";
+    layer.appendChild(g);
+}
+
+};
+</script>
+
+<script>
+
+window.onload = function(){
+
+const layer = document.querySelector("#page42 #music42");
+if(!layer) return;
+
+// 🎵 music notes
+let notes = ["🎵","🎶","♪","♫"];
+for(let i=0;i<20;i++){
+    let n = document.createElement("div");
+    n.className = "m42-note";
+    n.innerText = notes[Math.floor(Math.random()*notes.length)];
+    n.style.left = Math.random()*100 + "%";
+    n.style.animationDuration = (4 + Math.random()*4) + "s";
+    layer.appendChild(n);
+}
+
+// 🌊 equalizer bars
+for(let i=0;i<40;i++){
+    let b = document.createElement("div");
+    b.className = "m42-bar";
+    b.style.left = (i*3) + "%";
+    b.style.animationDuration = (0.5 + Math.random()) + "s";
+    layer.appendChild(b);
+}
+
+// ✨ particles
+for(let i=0;i<30;i++){
+    let d = document.createElement("div");
+    d.className = "m42-dot";
+    d.style.top = Math.random()*100 + "%";
+    d.style.left = Math.random()*100 + "%";
+    layer.appendChild(d);
+}
+
+};
+</script>
+<script>
+(function(){
+
+function playSound(id, volume=0.4){
+    const s = document.getElementById(id);
+    if(!s) return;
+
+    s.currentTime = 0;
+    s.volume = volume;
+    s.play().catch(()=>{});
+}
+
+// 🎯 Detect which page is visible
+function getActivePage(){
+    const pages = document.querySelectorAll("[id^='page']");
+    for(let p of pages){
+        if(p.style.display !== "none"){
+            return p.id;
+        }
+    }
+    return null;
+}
+
+// 🖱️ Global click handler
+document.addEventListener("click", function(){
+
+    let page = getActivePage();
+
+    // 🎮 Gaming pages
+    if(page === "page22" || page === "page23" || page === "page25"){
+        playSound("s-game", 0.5);
+    }
+
+    // 💖 Romantic pages
+    else if(page === "page13" || page === "page16" || page === "page20"){
+        playSound("s-romantic", 0.5);
+    }
+
+    // 🎉 Celebration pages
+    else if(page === "page26" || page === "page42"){
+        playSound("s-party", 0.6);
+    }
+
+    // 🔘 Default click
+    else {
+        playSound("s-click", 0.3);
+    }
+
+});
+
+})();
+</script>
+
+<script>
+(function(){
+
+let time = 500; // ⏳ change timer here
+
+const timer = document.getElementById("timerText");
+const screen = document.getElementById("launchScreen");
+
+// 🎇 PARTICLE BACKGROUND (smooth & mobile safe)
+const canvas = document.getElementById("launchCanvas");
+const ctx = canvas.getContext("2d");
+
+let w, h;
+
+function resize(){
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener("resize", resize);
+
+let particles = [];
+
+for(let i=0;i<60;i++){
+    particles.push({
+        x: Math.random()*w,
+        y: Math.random()*h,
+        size: Math.random()*2,
+        speed: Math.random()*1
+    });
+}
+
+function draw(){
+    ctx.clearRect(0,0,w,h);
+
+    particles.forEach(p=>{
+        p.y += p.speed;
+
+        if(p.y > h){
+            p.y = 0;
+            p.x = Math.random()*w;
+        }
+
+        ctx.fillStyle = "#00ffff";
+        ctx.fillRect(p.x,p.y,p.size,p.size);
+    });
+
+    requestAnimationFrame(draw);
+}
+draw();
+
+// ⏳ COUNTDOWN
+let interval = setInterval(()=>{
+
+    time--;
+
+    if(time > 0){
+        timer.innerText = time;
+    } else {
+        timer.innerText = "4 U 🚀";
+    }
+
+    if(time < 0){
+        clearInterval(interval);
+
+        // 💥 flash effect
+        document.body.style.background = "white";
+
+        setTimeout(()=>{
+            document.body.style.background = "";
+
+            // 🎬 smooth exit
+            screen.style.transition = "1s";
+            screen.style.opacity = "0";
+            screen.style.transform = "scale(1.2)";
+
+            setTimeout(()=>{
+                screen.style.display = "none";
+            },1000);
+
+        },200);
+    }
+
+},1000);
+
+})();
+</script>
+
+</body>
+</html>
